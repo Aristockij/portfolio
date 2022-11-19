@@ -27,10 +27,7 @@ const TriggerAnimation = () => {
             }).to('.home-block',{
                 rotate: 360,
             })
-            ScrollTrigger.addEventListener("refresh", () => nextStore.locoScroll.update());
-
-            ScrollTrigger.refresh();
-        },100);
+        }, 200)
     }, [])
     return (
         <div className='home-animation-wrapper animation-1'>

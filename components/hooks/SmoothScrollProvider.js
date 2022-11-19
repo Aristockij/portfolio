@@ -83,19 +83,19 @@ export const SmoothScrollProvider = ({ children }) => {
     }, [scroll]);
 
 
-    useEffect(()=>{
-        if(nextStore.locoScroll){
-            const resize = new ResizeObserver(()=>{
-                if(nextStore.locoScroll){
-                    setTimeout(()=>{
-                        nextStore.locoScroll.update();
-                    },10)
-                }
-            });
-
-            resize.observe(document.querySelector("[data-scroll-container]"))
-        }
-    }, [nextStore.locoScroll]);
+    // useEffect(()=>{
+    //     if(nextStore.locoScroll){
+    //         const resize = new ResizeObserver(()=>{
+    //             if(nextStore.locoScroll){
+    //                 setTimeout(()=>{
+    //                     nextStore.locoScroll.update();
+    //                 },10)
+    //             }
+    //         });
+    //
+    //         resize.observe(document.querySelector("[data-scroll-container]"))
+    //     }
+    // }, [nextStore.locoScroll]);
 
     return (
         <SmoothScrollContext.Provider value={{ scroll }}>

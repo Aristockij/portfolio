@@ -23,11 +23,7 @@ const ScrubAnimation = () => {
                }, {
                    y: 150,
                })
-
-            ScrollTrigger.addEventListener("refresh", () => nextStore.locoScroll.update());
-
-            ScrollTrigger.refresh();
-        },200);
+        },100);
     }, [])
     return (
         <div className='home-animation-wrapper animation-2'>

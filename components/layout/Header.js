@@ -8,12 +8,16 @@ const Header = () => {
             link: '/',
         },
         {
-            title: 'Доска предложений',
+            title: 'Разные примеры работ',
             link: '/examples-board',
         },
         {
             title: 'Контакты',
             link: '/contacts',
+        },
+        {
+            title: 'Test',
+            link: '/test',
         },
     ]
 

@@ -20,28 +20,24 @@ const LottieAnimation = () => {
                 autoplay: false,
                 animationData: animationPath,
             });
-        setTimeout(()=>{
-            let lottieTl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '.animation-3',
-                    start: "top 50% ",
-                    end: 'bottom 50% ',
-                    scrub: 1,
-                    // markers: true,
-                    scroller: "#smooth-scroll",
-                }
-            })
-            lottieTl.to(startFrame, {
-                frame: animation.totalFrames - 1,
-                duration: 4,
-                ease: "none",
-                onUpdate: () => animation.goToAndStop(startFrame.frame, true),
-            })
-
-            ScrollTrigger.addEventListener("refresh", () => nextStore.locoScroll.update());
-
-            ScrollTrigger.refresh();
-        },200);
+            setTimeout(()=>{
+                let lottieTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '.animation-3',
+                        start: "top 50% ",
+                        end: 'bottom 50% ',
+                        scrub: 1,
+                        // markers: true,
+                        scroller: "#smooth-scroll",
+                    }
+                })
+                lottieTl.to(startFrame, {
+                    frame: animation.totalFrames - 1,
+                    duration: 4,
+                    ease: "none",
+                    onUpdate: () => animation.goToAndStop(startFrame.frame, true),
+                })
+            }, 100)
         return ()=>{
             animation.destroy();
         }

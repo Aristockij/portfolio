@@ -1,9 +1,9 @@
 import React, from 'react';
 import {observer} from "mobx-react";
-import TriggerAnimation from "./TriggerAnimation";
 import ScrubAnimation from "./ScrubAnimation";
 import LottieAnimation from "./LottieAnimation";
 import HoverAnimation from "./HoverAnimation";
+import TriggerAnimation from "./TriggerAnimation";
 
 const GsapAnimation = () => {
 
